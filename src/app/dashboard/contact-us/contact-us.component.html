@@ -1,0 +1,31 @@
+<div class="container">
+   
+    <div class="form-body">
+        <div class="email-header">
+            Feel Free to Contact Us
+        </div>
+        <form class="form" [formGroup]="emailDto" (ngSubmit)="sendEmail()" >
+          <div class="input-element">
+            <label for="">Your Email</label>
+            <input type="text" formControlName="from" placeholder="Enter your Valid Email here">
+          </div>
+          <div class="input-element">
+            <label for="">Subject</label>
+            <input type="text" formControlName="subject" placeholder="Email Subject">
+          </div>
+    
+          <div class="input-element">
+            <label for="">Enter Your Query</label>
+            <!-- <textarea type="text" formControlName="body"> -->
+                <textarea name="" id="" cols="2" rows="3" formControlName="body"></textarea>
+          </div>
+    
+          <div class="input-btn">
+    
+              <button [disabled]="!emailDto.valid">Send Email</button>
+          
+          </div>
+    
+        </form>
+      </div>
+</div>

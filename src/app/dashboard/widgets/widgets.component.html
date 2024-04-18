@@ -1,0 +1,31 @@
+<div class="widgets-container">
+    <div class="widget" (click)="onStudent()">
+        <div class="icon">
+            <fa-icon [icon]="faUser"></fa-icon>
+        </div>
+        <div class="value">
+            <div class="top"> {{studentCount}}</div>
+            <div class="bottom">Students</div>
+        </div>
+    </div>
+
+    <div class="widget">
+        <div class="icon">
+            <fa-icon [icon]="faUser1"></fa-icon>
+        </div>
+        <div class="value">
+            <div class="top"> --</div>
+            <div class="bottom">Users</div>
+        </div>
+    </div>
+
+    <div class="widget">
+        <div class="icon">
+            <fa-icon [icon]="faUser"></fa-icon>
+        </div>
+        <div class="value">
+            <div class="top"> --</div>
+            <div class="bottom">Others</div>
+        </div>
+    </div>
+</div>

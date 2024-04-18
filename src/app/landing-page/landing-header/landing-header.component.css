@@ -1,0 +1,76 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 98.39%;
+    height: 70px;
+    background-color: #445F75;
+    padding: 5px 10px 5px 10px;
+    .logo{
+        width: 20vw;
+        color :white;
+        font-size: 22px;
+        font-weight: 700;
+        text-align: center;
+    }
+    .logo:hover{
+        color: #A04542;
+        cursor: pointer;
+    }
+
+    .nav-items {
+        width: 30vw;
+        ul{
+            display: flex;
+            list-style: none;
+            justify-content: space-evenly;
+            li a{
+                text-decoration: none;
+                color :white;
+                font-size: 20px;
+                font-weight: 500;
+            }
+            li a:hover{
+                color: #A04542;
+            }
+        }
+    }
+
+    .auth{
+        width: 20vw;
+        height: 50px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        ul{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            li{
+                margin-right: 10px;
+              .auth-btn{
+                width: 65px;
+                height: 38px;
+                border-radius: 10px;
+                border: none;
+
+                background-color: #757BFA;
+
+                font-size: 20;
+                font-weight: bold;
+                box-shadow: 3px 3px 3px #939393;
+
+              }
+              .auth-btn:hover{
+                cursor: pointer;
+                background-color:#1490F5 ;
+                color: #fff;
+              }
+            }
+
+        }
+      
+    }
+   
+}

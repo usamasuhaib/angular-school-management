@@ -1,0 +1,36 @@
+<div class="container">
+   
+    <div class="form-body">
+        <div class="login-header">
+            User Registration
+        </div>
+        <form class="form" [formGroup]="registrationForm" (ngSubmit)="register()">
+          <div class="input-element">
+            <label for="">Username</label>
+            <input type="text" formControlName="userName">
+          </div>
+
+          <div class="input-element">
+            <label for="">Email</label>
+            <input type="text" formControlName="email">
+          </div>
+    
+          <div class="input-element">
+            <label for="">Password</label>
+            <input type="password" formControlName="password">
+          </div>
+
+          <div class="input-element">
+            <label for="">Confirm-Password</label>
+            <input type="password">
+          </div>
+    
+          <div class="input-btn">
+    
+              <button [disabled]="!registrationForm.valid">Register</button>
+          
+          </div>
+    
+        </form>
+      </div>
+</div>

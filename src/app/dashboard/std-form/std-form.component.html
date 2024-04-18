@@ -1,0 +1,46 @@
+<div class="form-container">
+  <div class="form-heading">
+    @if(isEdit){
+      <h3>Edit Student</h3>
+    }@else {
+      <h3>Add Student</h3>
+    }
+  </div>
+  <div class="form-body">
+    <form class="form" [formGroup]="stdForm" (ngSubmit)="save()">
+
+
+      @if(isEdit){
+        <div class="input-element">
+          <label for="">Id</label>
+          <input type="text" formControlName="id" readonly style="background-color: gray;">
+        </div>
+      }
+
+      <div class="input-element">
+        <label for="">Name</label>
+        <input type="text" formControlName="name">
+      </div>
+
+      <div class="input-element">
+        <label for="">Email</label>
+        <input type="text" formControlName="email">
+      </div>
+
+      <div class="input-element">
+        <label for="">Phone</label>
+        <input type="text" formControlName="phone">
+      </div>
+
+      <div class="input-btn">
+
+        @if(isEdit){
+          <button>Update</button>
+        }@else {
+          <button>Submit</button>
+        }
+      </div>
+
+    </form>
+  </div>
+</div>

@@ -1,0 +1,44 @@
+.widgets-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.widget{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    height: 180px;
+
+    background-color: #fff;
+    box-shadow: 5px 5px 5px #939393;
+
+
+    border-radius: 10px;
+    margin: 40px 5px 10px 15px;
+
+
+    .icon{
+        font-size: 75px;
+        margin-right: 25px;
+    }
+
+    .value{
+       text-align: center;
+
+       .top {
+        font-size: 35px;
+        }
+
+        .bottom{
+            font-size: 22px;
+            margin-top: 15;
+        }
+    }
+}
+
+.widget:hover{
+    background-color:#DDEDEA ;
+    cursor: pointer;
+}

@@ -1,0 +1,28 @@
+<ng-container *ngIf="isLandingPageRoute(); else dashboardContent">
+  <!-- Landing Page Content -->
+  <app-landing-main></app-landing-main>
+</ng-container>
+
+<ng-template #dashboardContent>
+
+  <div class="container">
+    <!-- Header Section -->
+    <div class="header" *ngIf="!isRegisterOrLoginRoute()">
+      <app-navbar></app-navbar>
+    </div>
+
+    <!-- Main Container with Sidebar and Content -->
+    <div class="main-container">
+      <!-- Sidebar / Side Navigation -->
+      <div class="side-nav" *ngIf="!isRegisterOrLoginRoute()">
+        <app-side-nav></app-side-nav>
+      </div>
+
+      <!-- Main Content Area -->
+      <div class="main">
+        <!-- The content here will be dynamic based on the current route -->
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</ng-template>

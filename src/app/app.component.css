@@ -1,0 +1,14 @@
+.main-container{
+    display: flex;
+
+    .side-nav{
+        width: 320px;
+        height: 90vh;
+        display: flex;
+    }
+
+    .main{
+        width: 95%;
+        height: 80vh;
+    }
+}
