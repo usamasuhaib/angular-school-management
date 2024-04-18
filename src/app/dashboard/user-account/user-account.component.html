@@ -1,0 +1,17 @@
+<div class="form-container">
+    <div class="form-heading">
+     
+        <h3>User Account</h3>
+    
+    </div>
+    <div class="profile-body">
+      <div *ngIf="userProfile">
+        <h2>Welcome, {{ userProfile.firstName }} {{ userProfile.lastName }}</h2>
+        <p>Email: {{ userProfile.email }}</p>
+        <!-- Display other user details as needed -->
+      </div>
+      <div *ngIf="!userProfile">
+        <p>Loading user profile...</p>
+      </div>
+    </div>
+  </div>

@@ -3,7 +3,8 @@
 
     .side-nav{
         width: 320px;
-        height: 90vh;
+        min-height: 92vh;
+        height: fit-content;
         display: flex;
     }
 

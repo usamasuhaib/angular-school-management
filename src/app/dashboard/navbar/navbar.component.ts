@@ -13,5 +13,8 @@ constructor(private router:Router){
 
 }
 
+onAccount(){
+  this.router.navigate(['/account'])
 
+}
 }

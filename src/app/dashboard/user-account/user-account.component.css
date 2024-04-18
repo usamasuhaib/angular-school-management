@@ -1,0 +1,24 @@
+.form-container{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    .form-heading{
+        margin-top: 8px;
+        height: 50px;
+        h3{
+            font-size: 23px;
+        }
+    }
+
+    .profile-body{
+        width: 65%;
+        height: 450px;
+        background-color: white;
+        box-shadow: 5px 5px 5px #939393;
+        border-radius: 10px;
+      
+    }
+}

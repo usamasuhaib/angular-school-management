@@ -16,8 +16,8 @@
 
     .table-body{
         background-color: #fff;
-        width: 98%;
-        height: 80%;
+        width: 96%;
+        height: fit-content;
         border-radius: 10px;
         box-shadow: 5px 5px 5px #939393;
 

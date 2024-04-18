@@ -4,6 +4,7 @@ import { MainComponent } from './dashboard/main/main.component';
 import { StdFormComponent } from './dashboard/std-form/std-form.component';
 import { StdListComponent } from './dashboard/std-list/std-list.component';
 import { ContactUsComponent } from './dashboard/contact-us/contact-us.component';
+import { UserAccountComponent } from './dashboard/user-account/user-account.component';
 
 export const routes: Routes = [
 
@@ -18,6 +19,7 @@ export const routes: Routes = [
   { path: 'std-list', component: StdListComponent },
 
   { path: 'contact-us', component: ContactUsComponent },
+  {path:'account', component:UserAccountComponent},
 
 
   {path:'user', loadChildren:()=>import('./user/user.module').then(m=>m.UserModule)},
