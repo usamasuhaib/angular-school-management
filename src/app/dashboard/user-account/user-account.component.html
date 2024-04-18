@@ -1,17 +1,27 @@
 <div class="form-container">
-    <div class="form-heading">
-     
-        <h3>User Account</h3>
-    
+  <div class="form-heading">
+
+    <h3>User Account</h3>
+
+  </div>
+  <div class="profile-body" *ngIf="userProfile">
+
+    <div class="user-credientials">
+      <label for="">Name</label>
+      <input type="text" formControlName="name" value="{{ userProfile.userName }}" readonly>
     </div>
-    <div class="profile-body">
-      <div *ngIf="userProfile">
-        <h2>Welcome, {{ userProfile.firstName }} {{ userProfile.lastName }}</h2>
-        <p>Email: {{ userProfile.email }}</p>
-        <!-- Display other user details as needed -->
-      </div>
-      <div *ngIf="!userProfile">
-        <p>Loading user profile...</p>
-      </div>
+
+    <div class="user-credientials">
+      <label for="">Email</label>
+      <input type="text" formControlName="name" value="{{ userProfile.email }}" readonly>
     </div>
   </div>
+
+
+  <div class="profile-body" *ngIf="!userProfile">
+    <div class="user-credientials">
+      <h3>Loading profile data....</h3>
+    </div>
+
+  </div>
+</div>
