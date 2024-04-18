@@ -1,42 +1,47 @@
+.form-heading{
+    display: flex;
+    justify-content: center;
+    margin: 15px 0px 20px 5px;
+
+    font-size: 25px;
+
+}
+
 .form-container{
 
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
+
     width: 100%;
     height: 100%;
-    .form-heading{
-        margin-top: 8px;
-        height: 50px;
-        h3{
-            font-size: 23px;
-        }
-    }
 
+
+    flex-direction: row;
     .profile-body{
-        width: 70%;
-        height: 450px;
-        background-color: white;
+        width: 50%;
+        height: 300px;
+        background-color: #F0F2E4;
         box-shadow: 5px 5px 5px #939393;
         border-radius: 10px;
-
+        margin: 25px;
         display: flex;
         flex-direction: column;
 
         align-items: center;
+        justify-content: center;
      
         .user-credientials{
             display: flex;
             justify-content: space-evenly;
             align-items: center;
 
-            margin: 20px;
+            margin: 10px;
 
 
-            width: 500px;
-            height: 80px;
-            box-shadow: 5px 5px 5px #939393;
-            background-color: #F0F2E4;
+            width: 450px;
+            height: 100px;
+            /* box-shadow: 5px 5px 5px #939393; */
+            /* background-color: #F0F2E4; */
             border-radius: 5px;
 
             label{
@@ -55,5 +60,39 @@
             }
         }
       
+    }
+
+    .profile-image{
+        width: 300px;
+        height: 300px;
+        background-color: #F0F2E4;
+        box-shadow: 5px 5px 5px #939393;
+        border-radius: 10px;
+        margin: 25px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        .image{
+
+            height: 150px;
+            width: 150px;
+            margin-top: 15px;
+            border: 2px solid black;
+            box-shadow: 5px 5px 5px #939393;
+
+            border-radius: 50%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+
+        }
+        .description{
+            margin: 15px;
+            font-size: 20px;
+        }
     }
 }
