@@ -36,5 +36,9 @@ onEmail(){
 
 }
 
+onImages(){
+  this.router.navigate(['/images']);
+}
+
 
 }

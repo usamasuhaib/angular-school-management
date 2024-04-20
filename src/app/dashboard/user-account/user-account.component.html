@@ -1,13 +1,13 @@
 <div class="form-heading">
 
-    <h3>Profile</h3>
+  <h3>Profile</h3>
 
-  </div>
+</div>
 
 <div class="form-container">
 
   <div class="profile-body" *ngIf="userProfile">
-    
+
     <div class="user-credientials">
       <label for="">Name</label>
       <input type="text" formControlName="name" value="{{ userProfile.userName }}" readonly>
@@ -17,21 +17,42 @@
       <label for="">Email</label>
       <input type="text" formControlName="name" value="{{ userProfile.email }}" readonly>
     </div>
+
   </div>
 
   <div class="profile-image">
+    <!-- Display existing profile image -->
 
-    <div class="image">
-      <h2>US</h2>
+    <div class="image" *ngIf="userProfile.imagePath; else emptyMessage">
+      <!-- Display the current profile image -->
+      <img [src]="'http://localhost:5182/Uploads/Images/' + userProfile.imagePath" alt="Profile Image">
+      <!-- Hidden file input -->
+
     </div>
 
-    <div class="description">
-      <h3>
-        Admin
-      </h3>
+    <div class="role">
+      Admin
     </div>
+
+
+    <form class="update-profile" [formGroup]="imgData" (ngSubmit)="updateImage()">
+
+      <input type="file" formControlName="file">
+      <button>Update Image</button>
+    </form>
+
+
+
+    <ng-template #emptyMessage>
+      <div class="image">
+        US
+      </div>
+    </ng-template>
+
 
   </div>
+
+
 
 
 

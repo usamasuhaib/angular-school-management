@@ -21,11 +21,7 @@ export class StdListComponent {
   }
 
   ngOnInit(){
-    // this.stdService.geAlltStudents().subscribe(result=>{
-    //   this.stdList=result;
-    //   console.log(result);
-    // });
-
+ 
     this.stdService.geAlltStudents().subscribe((response)=>{
       this.stdList=response;
       console.log(response);
@@ -33,7 +29,6 @@ export class StdListComponent {
       console.error('Access Error :', error); // Handle HTTP error
     }
   );
-
 
 
   }

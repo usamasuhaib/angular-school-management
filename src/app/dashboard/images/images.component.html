@@ -1,0 +1,37 @@
+
+<div class="main-list-container">
+    <div class="table-heading">
+      <h3>Images List</h3>
+    </div>
+    <div class="table-body">
+
+        <table class="table" >
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>path</th>
+                    <th>Image</th>
+
+                </tr>
+            </thead>
+            <tbody *ngIf="imgList.length > 0; else emptyMessage" class="tbody">
+                <tr *ngFor="let img of imgList">
+                    <td>{{img.id}}</td>
+                    <td>{{img.imagePath}}</td>
+                    <td>
+                        <img [src]="'http://localhost:5182/Uploads/Images/' + img.imagePath" alt="Image" style="width: 100px; height: 100px;">
+                        <!-- <img [src]="'http://localhost:5182/Uploads/Images/' + userProfile.imagePath" alt="Image" style="width: 100px; height: 100px;"> -->
+
+                    </td>
+                </tr>
+            </tbody>
+            <ng-template #emptyMessage>
+                <tr class="no-record">
+                <td colspan="5">No records found.</td>
+                </tr>
+            </ng-template>
+        </table>
+       
+      
+    </div>
+  </div>

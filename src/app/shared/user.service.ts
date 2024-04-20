@@ -12,8 +12,14 @@ export class UserService {
 
 
   getUserProfile():Observable<any> {
-    return this.httpClient.get<any>(this.baseUrl+"/api/Authentication/Profile");
+    return this.httpClient.get<any>(this.baseUrl+"/api/Profile/Details");
   }
 
+  // updateProfileImage():Observable<any>{
+  //   return this.httpClient.patch<any>(this.baseUrl+"api/profile",userId,file)
+  // }
 
+
+
+  
 }
