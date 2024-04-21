@@ -25,24 +25,18 @@
 
     <div class="image" *ngIf="userProfile.imagePath; else emptyMessage">
       <!-- Display the current profile image -->
-      <img [src]="'http://localhost:5182/Uploads/Images/' + userProfile.imagePath" alt="Profile Image">
+      <label for="fileInput">
+        <img [src]="'http://localhost:5182/Uploads/Images/' + userProfile.imagePath" alt="Profile Image">
+        <input type="file" id="fileInput" (change)="onFileSelected($event)" style="display: none">
+      </label>
       <!-- Hidden file input -->
 
     </div>
 
+
     <div class="role">
       Admin
     </div>
-
-
-    <form class="update-profile" [formGroup]="imgData" (ngSubmit)="updateImage()">
-
-      <input type="file" formControlName="file">
-      <button>Update Image</button>
-    </form>
-
-
-
     <ng-template #emptyMessage>
       <div class="image">
         US

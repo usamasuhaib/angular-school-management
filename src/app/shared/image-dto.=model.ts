@@ -1,6 +1,6 @@
 export class ImageDto {
 
-    id?:any;
+    id?:'';
     image?:File;
    
 }

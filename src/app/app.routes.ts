@@ -24,5 +24,6 @@ export const routes: Routes = [
   {path:'account', component:UserAccountComponent},
 
 
+
   {path:'user', loadChildren:()=>import('./user/user.module').then(m=>m.UserModule)},
 ];
